@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur AIA vers Android Studio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 50px auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
+        h1 { color: #00796b; text-align: center; margin-bottom: 30px; }
+        .input-group { margin-bottom: 20px; border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #004d40; }
+        input[type="file"], input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { background-color: #00796b; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; transition: background-color 0.3s; }
+        button:hover { background-color: #004d40; }
+        #log-output { background-color: #e8f5e9; border: 1px solid #c8e6c9; padding: 15px; border-radius: 8px; white-space: pre-wrap; margin-top: 20px; min-height: 100px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Convertisseur AIA ➡️ Android Studio (Kotlin)</h1>
+
+    <div class="input-group">
+        <label for="aiaFile">1. Choisir le Fichier AIA (.aia)</label>
+        <input type="file" id="aiaFile" accept=".aia" required>
+        <small>Un fichier .aia est une archive .zip contenant la source de votre projet.</small>
+    </div>
+
+    <div class="input-group">
+        <label for="projectName">2. Nom du Projet Android Studio</label>
+        <input type="text" id="projectName" value="MonProjetKotlin" required>
+    </div>
+
+    <button onclick="startConversion()">Convertir et Simuler la Génération 🚀</button>
+
+    <div id="log-output">
+        Statut de la conversion : Prêt.
+    </div>
+</div>
+
+<script>
+/**
+ * NOTE TECHNIQUE :
+ * Pour une vraie conversion, le code ci-dessous (la fonction startConversion)
+ * devrait envoyer le fichier AIA à un serveur (back-end) pour un traitement lourd :
+ * 1. Décompression du ZIP (AIA).
+ * 2. Parsing du fichier .scm (Layout).
+ * 3. Parsing du fichier .bky (Blocs XML).
+ * 4. Transpilation des blocs en Kotlin.
+ * 5. Création de la structure Android Studio (XML, Kotlin, Gradle, Assets).
+ * 6. Compression en fichier ZIP final.
+ *
+ * Le script ci-dessous SIMULE ces étapes pour illustrer la maquette frontale.
+ */
+function startConversion() {
+    const fileInput = document.getElementById('aiaFile');
+    const projectName = document.getElementById('projectName').value;
+    const logOutput = document.getElementById('log-output');
+    const file = fileInput.files[0];
+
+    logOutput.textContent = 'Statut de la conversion : Démarrage...';
+
+    if (!file) {
+        logOutput.textContent += '\nERREUR : Veuillez sélectionner un fichier .aia.';
+        return;
+    }
+
+    if (!projectName.trim()) {
+        logOutput.textContent += '\nERREUR : Le nom du projet ne peut pas être vide.';
+        return;
+    }
+
+    logOutput.textContent = `Statut de la conversion : Analyse du fichier "${file.name}"...`;
+    
+    // Étape 1 : SIMULATION d'Extraction (lecture en tant que ZIP)
+    setTimeout(() => {
+        logOutput.textContent += '\n[OK] Fichier AIA décompressé. Fichiers sources trouvés (SCM, BKY, assets).';
+        
+        // Étape 2 : SIMULATION de Conversion de l'Interface (SCM -> XML)
+        setTimeout(() => {
+            logOutput.textContent += '\n[INFO] Analyse de l\'interface (.scm) en cours...';
+            logOutput.textContent += '\n[OK] Interface App Inventor convertie en Layout XML Android.';
+
+            // Étape 3 : SIMULATION de Conversion de la Logique (BKY -> Kotlin)
+            setTimeout(() => {
+                logOutput.textContent += '\n[INFO] Traduction des Blocs (.bky XML) vers le code Kotlin... (Processus complexe côté serveur)';
+                
+                // C'est l'étape la plus longue et la plus difficile : la transpilation
+                setTimeout(() => {
+                    logOutput.textContent += '\n[OK] Logique des blocs transposée en "MainActivity.kt" Kotlin.';
+
+                    // Étape 4 : SIMULATION d'Assemblage et de Création du ZIP
+                    setTimeout(() => {
+                        logOutput.textContent += '\n[INFO] Création de la structure de projet Android Studio et des fichiers Gradle...';
+                        logOutput.textContent += `\n✅ CONVERSION TERMINÉE ! Fichier "${projectName}.zip" prêt.`;
+                        
+                        // Simulation de la fin de l'opération
+                        // Le code réel initierait ici le téléchargement du fichier ZIP
+                        logOutput.textContent += '\n\nSimuler le téléchargement du fichier ZIP...';
+
+                    }, 1500); // Délai pour l'étape 4
+                }, 3000); // Délai pour l'étape 3
+            }, 1500); // Délai pour l'étape 2
+        }, 1500); // Délai pour l'étape 1
+
+    }, 1000); // Délai initial
+}
+</script>
+
+</body>
+</html>
