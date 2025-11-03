@@ -1,0 +1,12 @@
+{
+  "name": "ai2-convertisseur-frontend",
+  "version": "1.0.0",
+  "description": "Fichiers statiques et fonctions du convertisseur AIA.",
+  "scripts": {
+    "build": "echo 'Construction du site statique terminee'"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "xml2js": "^0.6.2"
+  }
+}
