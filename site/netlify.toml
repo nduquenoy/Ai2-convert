@@ -1,0 +1,14 @@
+[build]
+  # Dossier contenant les fichiers statiques (le HTML, CSS, JS)
+  publish = "site"
+
+  # Commande de construction (exécutée dans le dossier racine/du build)
+  # Celle-ci appelle le script 'build' dans site/package.json
+  command = "npm --prefix ./site run build" 
+  
+  # Dossier où se trouvent vos fonctions serverless
+  functions = "site/functions"
+
+# Si vous voulez forcer une version de Node.js (bonne pratique)
+[build.environment]
+  NODE_VERSION = "20"
