@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertisseur AIA vers Android Studio</title>
+    <title>AIA --> Kotlin converter</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
         .container { max-width: 800px; margin: 50px auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
@@ -19,20 +19,20 @@
 <body>
 
 <div class="container">
-    <h1>Convertisseur AIA ➡️ Android Studio (Kotlin)</h1>
+    <h1>AIA --> Kotlin converter</h1>
 
     <div class="input-group">
-        <label for="aiaFile">1. Choisir le Fichier AIA (.aia)</label>
+        <label for="aiaFile">1. Choose the aia file (.aia)</label>
         <input type="file" id="aiaFile" accept=".aia" required>
-        <small>Un fichier .aia est une archive .zip contenant la source de votre projet.</small>
+        <small>A aia file is a AI2 project</small>
     </div>
 
     <div class="input-group">
-        <label for="projectName">2. Nom du Projet Android Studio</label>
+        <label for="projectName">2. Android name project</label>
         <input type="text" id="projectName" value="MonProjetKotlin" required>
     </div>
 
-    <button onclick="startConversion()">Convertir et Simuler la Génération 🚀</button>
+    <button onclick="startConversion()">Convert</button>
 
     <div id="log-output">
         Statut de la conversion : Prêt.
