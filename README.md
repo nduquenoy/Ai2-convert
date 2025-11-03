@@ -21,14 +21,14 @@ A tool to **convert MIT App Inventor (.aia) projects** into **Android Studio Kot
 ## 🔗 Live Demo
 
 You can try a live demo here:  
-[https://ai2-to-kotlin.netlify.app](https://ai2-to-kotlin.netlify.app)
+[https://ai2-convert.netlify.app](https://ai2-convert.netlify.app)
 
 ---
 
 ## 📁 Repository
 
 All source code is on GitHub:  
-[https://github.com/nduquenoy/Ai2-convertisseur](https://github.com/nduquenoy/Ai2-convertisseur)
+[https://github.com/nduquenoy/Ai2-convert](https://github.com/nduquenoy/Ai2-convert)
 
 ---
 
