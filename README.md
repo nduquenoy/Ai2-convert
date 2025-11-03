@@ -1,7 +1,7 @@
 # AI2 AIA to Android Studio Kotlin Converter
 
 ![Project Status](https://img.shields.io/badge/status-Early%20Stage-red)
-![Netlify Status](https://api.netlify.com/api/v1/badges/d0b6ca98-e237-4d06-abf4-e998e09f2dcc/deploy-status)]
+![Netlify Status](https://api.netlify.com/api/v1/badges/d0b6ca98-e237-4d06-abf4-e998e09f2dcc/deploy-status)
 
 A tool to **convert MIT App Inventor (.aia) projects** into **Android Studio Kotlin projects**.  
 
