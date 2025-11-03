@@ -11,7 +11,9 @@
       "Text": "android:text",
       "BackgroundColor": "android:backgroundTint",
       "Width": "android:layout_width",
-      "Height": "android:layout_height"
+      "Height": "android:layout_height",
+      "TextColor": "android:textColor",
+      "FontSize": "android:textSize"
     }
   },
   "TextBox": {
@@ -20,12 +22,128 @@
     "default_properties": {
       "Width": "MATCH_PARENT",
       "Height": "WRAP_CONTENT",
-      "Hint": ""
+      "Hint": "",
+      "Text": ""
     },
     "property_map": {
       "Text": "android:text",
       "Hint": "android:hint",
-      "NumbersOnly": "android:inputType"
+      "NumbersOnly": "android:inputType",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height",
+      "TextColor": "android:textColor",
+      "FontSize": "android:textSize"
+    }
+  },
+  "Label": {
+    "xml_tag": "TextView",
+    "id_prefix": "lbl",
+    "default_properties": {
+      "Width": "WRAP_CONTENT",
+      "Height": "WRAP_CONTENT",
+      "Text": "Label"
+    },
+    "property_map": {
+      "Text": "android:text",
+      "TextColor": "android:textColor",
+      "FontSize": "android:textSize",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height",
+      "TextAlignment": "android:gravity"
+    }
+  },
+  "CheckBox": {
+    "xml_tag": "CheckBox",
+    "id_prefix": "cb",
+    "default_properties": {
+      "Width": "WRAP_CONTENT",
+      "Height": "WRAP_CONTENT",
+      "Text": "Check"
+    },
+    "property_map": {
+      "Text": "android:text",
+      "Checked": "android:checked",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height"
+    }
+  },
+  "Switch": {
+    "xml_tag": "Switch",
+    "id_prefix": "sw",
+    "default_properties": {
+      "Width": "WRAP_CONTENT",
+      "Height": "WRAP_CONTENT",
+      "Text": "Switch"
+    },
+    "property_map": {
+      "Text": "android:text",
+      "Checked": "android:checked",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height"
+    }
+  },
+  "Slider": {
+    "xml_tag": "SeekBar",
+    "id_prefix": "sb",
+    "default_properties": {
+      "Width": "MATCH_PARENT",
+      "Height": "WRAP_CONTENT",
+      "Min": 0,
+      "Max": 100,
+      "Progress": 0
+    },
+    "property_map": {
+      "Min": "android:min",
+      "Max": "android:max",
+      "Value": "android:progress",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height"
+    }
+  },
+  "Image": {
+    "xml_tag": "ImageView",
+    "id_prefix": "img",
+    "default_properties": {
+      "Width": "WRAP_CONTENT",
+      "Height": "WRAP_CONTENT",
+      "Source": ""
+    },
+    "property_map": {
+      "Source": "android:src",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height",
+      "ScaleType": "android:scaleType"
+    }
+  },
+  "LabelListPicker": {
+    "xml_tag": "Spinner",
+    "id_prefix": "sp",
+    "default_properties": {
+      "Width": "MATCH_PARENT",
+      "Height": "WRAP_CONTENT"
+    },
+    "property_map": {
+      "Elements": "android:entries",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height"
+    }
+  },
+  "ProgressBar": {
+    "xml_tag": "ProgressBar",
+    "id_prefix": "pb",
+    "default_properties": {
+      "Width": "WRAP_CONTENT",
+      "Height": "WRAP_CONTENT",
+      "Indeterminate": true,
+      "Max": 100,
+      "Progress": 0
+    },
+    "property_map": {
+      "Max": "android:max",
+      "Value": "android:progress",
+      "Indeterminate": "android:indeterminate",
+      "Width": "android:layout_width",
+      "Height": "android:layout_height"
     }
   }
 }
